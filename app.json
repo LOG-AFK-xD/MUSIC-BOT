@@ -9,7 +9,7 @@
         "pyrogram"
     ],
     "website": "https://t.me/Miss_Akshi_updates",
-    "repository": "https://github.com/darkphoenix2601/M.V._PLAYER",
+    "repository": "https://github.com/LOG-AFK-xD/MUSIC-BOT",
     "success_url": "https://t.me/doreamon_music",
     "env": {
         "API_ID": {
@@ -85,7 +85,7 @@
     "formation": {
         "worker": {
             "quantity": 1,
-            "size": "free"
+            "size": "Eco"
         }
     },
     "stack": "container"
