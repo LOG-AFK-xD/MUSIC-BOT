@@ -1,19 +1,18 @@
 import asyncio
-
 from pytgcalls import idle
-from driver.core import calls, bot, user
-
+from driver.Akshi import call_py, bot
 
 async def start_bot():
+    print("[INFO]: STARTING BOT CLIENT")
     await bot.start()
-    LOGS.info("[ INFO ] BOT & USERBOT CLIENT STARTED")
-    await calls.start()
-    LOGS.info("[ INFO ] PY-TGCALLS CLIENT STARTED")
-    await user.join_chat("VeezSupportGroup")
-    await user.join_chat("levinachannel")
+    print("[INFO]: STARTING PYTGCALLS CLIENT")
+    await call_py.start()
     await idle()
-    LOGS.info("[ INFO ] BOT & USERBOT CLIENT STOPPED")
+    print("[INFO]: STOPPING BOT & USERBOT")
     await bot.stop()
 
-loop = asyncio.get_event_loop_policy().get_event_loop()
+loop = asyncio.get_event_loop()
+loop.run_until_complete(start_bot())
+
+loop = asyncio.get_event_loop()
 loop.run_until_complete(start_bot())
